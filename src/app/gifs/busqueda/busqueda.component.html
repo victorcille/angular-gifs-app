@@ -1,0 +1,14 @@
+<h5>Buscar:</h5>
+<!-- 
+    Como sólo vamos a tener una caja de texto y nada más, no vamos a importar el FormsModule. 
+    Vamos a hacerlo de otra manera para que cuando insertemos un texto y pulsemos enter, busquemos por ese texto y la caja se vacíe 
+    automáticamente. 
+    Para ello, vamos a usar el @ViewChild (ver el .ts para más info)
+-->
+<input 
+    type="text" 
+    class="form-control" 
+    placeholder="Buscar gifs..." 
+    (keyup.enter)="buscar()"
+    #txtBuscar
+>
